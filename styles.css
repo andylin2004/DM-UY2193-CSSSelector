@@ -1,0 +1,38 @@
+/* this is for webpage control thingy */
+#header {
+    /* lock to top of page */
+    position: sticky;
+    /* basically how far from the top to lock it at */
+    top: 10px;
+    /* center align any text in header */
+    text-align: center;
+    /* green yellow background color so that things don't look weird */
+    background-color: greenyellow;
+    border-radius: 10px;
+    /* make things less verically constrained */
+    padding-top: 1px;
+    padding-bottom: 10px;
+}
+
+#controlbar {
+    /* set up flexbox func; vscode told me that flex is basically flexbox */
+    display: flex;
+    /* make things in flexbox show up in center */
+    justify-content: center;
+}
+
+#controlbar * > a {
+    padding: 20px;
+    text-decoration: none;
+}
+
+#controlbar * > a:visited, #controlbar * > a {
+    color: green;
+}
+
+/* this is for the selected tab i guess */
+/* slight weird behavior: space goes multiple deep, > goes one deep */
+#controlbar > #selected > a:link, #controlbar * > a:hover {
+    background-color: green;
+    color: greenyellow;
+}
