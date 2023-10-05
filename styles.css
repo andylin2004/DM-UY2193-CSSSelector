@@ -26,6 +26,7 @@
     text-decoration: none;
 }
 
+/* https://www.w3schools.com/cssref/css_selectors.php taught me about the not selector so that i can target elements that dont have a parent with the selected tag */
 #controlbar > :not(#selected) a:visited, #controlbar > :not(#selected) a:link{
     color: green;
 }
@@ -46,6 +47,7 @@ ul.macoslist li {
     list-style: none;
 }
 
+/* https://www.w3.org/Style/Examples/007/evenodd.en.html taught me that i can use even and odds to make every other child have a pattern thing if i wanted to */
 ul.macoslist li:nth-child(even) {
     /* vscode has this really cool color picker that i used here hehe */
     background-color: rgb(229, 229, 229);
