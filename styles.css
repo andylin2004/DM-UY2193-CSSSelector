@@ -40,3 +40,16 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+ul.macoslist li {
+    list-style: none;
+}
+
+ul.macoslist li:nth-child(even) {
+    /* vscode has this really cool color picker that i used here hehe */
+    background-color: rgb(229, 229, 229);
+}
+
+ul.macoslist * ul {
+    background-color: #ffffff;
+}
