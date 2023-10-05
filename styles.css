@@ -26,13 +26,14 @@
     text-decoration: none;
 }
 
-#controlbar * > a:visited, #controlbar * > a {
+#controlbar > :not(#selected) a:visited, #controlbar > :not(#selected) a:link{
     color: green;
 }
 
 /* this is for the selected tab i guess */
 /* slight weird behavior: space goes multiple deep, > goes one deep */
-#controlbar > #selected > a:link, #controlbar * > a:hover {
+/* i had to play around with things to see what linked correctly and futz with how priorities work */
+#controlbar > #selected a:link, #controlbar > #selected a:visited, #controlbar > :not(#selected) a:hover {
     background-color: green;
     color: greenyellow;
 }
