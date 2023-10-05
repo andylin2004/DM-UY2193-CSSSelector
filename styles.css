@@ -21,6 +21,7 @@
     justify-content: center;
 }
 
+/* selects all a elements that have at least one parent and that parent is a child of an element with id controlbar */
 #controlbar * > a {
     padding: 20px;
     text-decoration: none;
@@ -34,6 +35,7 @@
 /* this is for the selected tab i guess */
 /* slight weird behavior: space goes multiple deep, > goes one deep */
 /* i had to play around with things to see what linked correctly and futz with how priorities work */
+/* selects either all recursive child that is a:link or a:visited of #selected, which is also a child of #controlbar, or all recursive child that is a:hover that of not #selected, which is a child of #controlbar */
 #controlbar > #selected a:link, #controlbar > #selected a:visited, #controlbar > :not(#selected) a:hover {
     background-color: green;
     color: greenyellow;
@@ -43,16 +45,20 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* selects all li child of ul of id macoslist */
 ul.macoslist li {
+    /* strips lists of their symbol things */
     list-style: none;
 }
 
 /* https://www.w3.org/Style/Examples/007/evenodd.en.html taught me that i can use even and odds to make every other child have a pattern thing if i wanted to */
+/* selects all even numbered li childs of ul of id macoslist */
 ul.macoslist li:nth-child(even) {
     /* vscode has this really cool color picker that i used here hehe */
     background-color: rgb(229, 229, 229);
 }
 
+/* selects all ul childs regardless of how deep it is of ul of id macoslist*/
 ul.macoslist * ul {
     background-color: #ffffff;
 }
